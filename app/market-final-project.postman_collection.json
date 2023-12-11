@@ -1,0 +1,5614 @@
+{
+	"info": {
+		"_postman_id": "96d56d4f-b3be-4208-9811-2c2a1441fd3c",
+		"name": "market-final-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21528514"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "Register Account",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "momochirappa32@mail.com",
+											"description": "(Required) Email",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"description": "(Required) Password",
+											"type": "text"
+										},
+										{
+											"key": "full_name",
+											"value": "John Doelu",
+											"description": "Full Name",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "81121934455",
+											"description": "Phone Number",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Mampangin lagi",
+											"description": "Address",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "format jpg/png",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "city",
+											"value": "Jakarta",
+											"description": "Location/City",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								},
+								"description": "Register Account"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) Email",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "(Required) Password",
+													"type": "text"
+												},
+												{
+													"key": "full_name",
+													"value": "<string>",
+													"description": "Full Name",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "<integer>",
+													"description": "Phone Number",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "Address",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "format jpg/png",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"full_name\": \"John Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"password\": \"$2b$10$A7gqzQD5E/NJl4NJHeLpEuHK8cIsFLEBz4RSLKqua8N1EKFnB53Vy\",\n    \"phone_number\": 81121934455,\n    \"address\": \"Mampang PrPt.\",\n    \"image_url\": \"nul\",\n    \"city\": \"Jakarta\",\n    \"createdAt\": \"2000-01-01T00:00:00.000Z\",\n    \"updatedAt\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+								},
+								{
+									"name": "Email Already Exists.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "schema"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) Email",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "(Required) Password",
+													"type": "text"
+												},
+												{
+													"key": "full_name",
+													"value": "<string>",
+													"description": "Full Name",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "<integer>",
+													"description": "Phone Number",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "Address",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "format jpg/png",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "schema"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"badRequestEmail\",\n    \"message\": \"Email already exists\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "(Required) Email",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "(Required) Password",
+													"type": "text"
+												},
+												{
+													"key": "full_name",
+													"value": "<string>",
+													"description": "Full Name",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "<integer>",
+													"description": "Phone Number",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "Address",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "format jpg/png",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "Login Account",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "schema"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"akbar@mail.com\",\n  \"password\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								},
+								"description": "Login Account"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "schema"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "schema"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAbWFpbC5jb20iLCJpYXQiOjE2NTQ5MjcxODZ9.fghFryd8OPEHztZlrN50PtZj0EC7NWFVj2iPPN9xi1M\"\n  }\n}"
+								},
+								{
+									"name": "Email or Password Are Wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "schema"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "schema"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"wrongEmailPassword\",\n    \"message\": \"email or password are wrong\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "find user by id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDEzNjQyfQ.ukHn_xN5TE2MJHjxqxwdn1tE7HgUKAOjCaIgXtlX30k"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"user"
+									]
+								},
+								"description": "find user by id"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/auth/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"full_name\": \"John Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"password\": \"$2b$10$A7gqzQD5E/NJl4NJHeLpEuHK8cIsFLEBz4RSLKqua8N1EKFnB53Vy\",\n    \"phone_number\": 81121934455,\n    \"address\": \"Mampang PrPt.\",\n    \"city\": \"Jakarta\",\n    \"createdAt\": \"2000-01-01T00:00:00.000Z\",\n    \"updatedAt\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/auth/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"user"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Register Account",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDEzNjQyfQ.ukHn_xN5TE2MJHjxqxwdn1tE7HgUKAOjCaIgXtlX30k"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "full_name",
+											"value": "<string>",
+											"description": "Full Name",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "<string>",
+											"description": "Email",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "<string>",
+											"description": "Password",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "<integer>",
+											"description": "Phone Number",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "<string>",
+											"description": "Location/City",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "<string>",
+											"description": "format jpg/png",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "<string>",
+											"description": "Location/City",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"user"
+									]
+								},
+								"description": "Register Account"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "full_name",
+													"value": "<string>",
+													"description": "Full Name",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Email",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "Password",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "<integer>",
+													"description": "Phone Number",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "format jpg/png",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"full_name\": \"John Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"password\": \"$2b$10$A7gqzQD5E/NJl4NJHeLpEuHK8cIsFLEBz4RSLKqua8N1EKFnB53Vy\",\n    \"phone_number\": 81121934455,\n    \"address\": \"Mampang PrPt.\",\n    \"city\": \"Jakarta\",\n    \"createdAt\": \"2000-01-01T00:00:00.000Z\",\n    \"updatedAt\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+								},
+								{
+									"name": "Email Already Exists.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "schema"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "full_name",
+													"value": "<string>",
+													"description": "Full Name",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Email",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "Password",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "<integer>",
+													"description": "Phone Number",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "format jpg/png",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"user"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "schema"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"badRequestEmail\",\n    \"message\": \"Email already exists\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "full_name",
+													"value": "<string>",
+													"description": "Full Name",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Email",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "<string>",
+													"description": "Password",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "<integer>",
+													"description": "Phone Number",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "format jpg/png",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Location/City",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"user"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "change-password",
+					"item": [
+						{
+							"name": "Register Account",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "current_password",
+											"value": "<string>",
+											"description": "Current Password",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "<string>",
+											"description": "Current Password",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "<string>",
+											"description": "Current Password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/change-password",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"change-password"
+									]
+								},
+								"description": "Register Account"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "current_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												},
+												{
+													"key": "new_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												},
+												{
+													"key": "confirm_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/change-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"change-password"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"OK\",\n    \"message\": \"Change password success\"\n  }\n}"
+								},
+								{
+									"name": "Wrong Password",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "schema"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "current_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												},
+												{
+													"key": "new_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												},
+												{
+													"key": "confirm_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/change-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"change-password"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "schema"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"wrongPassword\",\n    \"message\": \"Password is wrong\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "current_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												},
+												{
+													"key": "new_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												},
+												{
+													"key": "confirm_password",
+													"value": "<string>",
+													"description": "Current Password",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/change-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"change-password"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "seller",
+			"item": [
+				{
+					"name": "banner",
+					"item": [
+						{
+							"name": "Fetch Banners",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/seller/banner",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"seller",
+										"banner"
+									]
+								},
+								"description": "Fetch Banners"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/banner",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"banner"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"name\": \"Promo\",\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/banner%2FBAN-1656828994177-promo.png?alt=media\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Lebran\",\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/banner%2FBAN-1656828994176-lebaran.png?alt=media\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Banner",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Fetch Banner by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/Banner/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"Banner",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Fetch Banner by ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/Banner/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"Banner",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"name\": \"Promo\",\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/banner%2FBAN-1656828994177-promo.png?alt=media\"\n  }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Fetch Category by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/seller/category/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"category",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Fetch Category by ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/seller/category/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"category",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Fetch Categories By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/seller/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"seller",
+										"category"
+									]
+								},
+								"description": "Fetch Categories By ID"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/seller/category",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"category"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Register Account",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQxNjMwfQ.zvQ-G7Hbva_O0kA5BQ6SmsCS9Oj9TTxCvk4BQYzzwdQ"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92159"
+												}
+											]
+										},
+										"description": "Register Account"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQxNjMwfQ.zvQ-G7Hbva_O0kA5BQ6SmsCS9Oj9TTxCvk4BQYzzwdQ"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id?",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"query": [
+														{
+															"key": "",
+															"value": null
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1000"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"name": "Content-Type",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"example\": {\n        \"id\": 1,\n        \"name\": \"sepatu\",\n        \"description\": \"Description Sepatu\",\n        \"base_price\": 1000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n        \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n        \"location\": \"Bandung\",\n        \"user_id\": 1,\n        \"created_at\": \"2000-01-01T00:00:00.000Z\",\n        \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n        \"categories\": [\n            {\n                \"id\": 1,\n                \"name\": \"Fashion\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Otomotif\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Electronic\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Food\"\n            }\n        ]\n    }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"productNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Fetch Products",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQxNjMwfQ.zvQ-G7Hbva_O0kA5BQ6SmsCS9Oj9TTxCvk4BQYzzwdQ"
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "sepatu",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "dolor ipsum",
+													"description": "Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "base_price",
+													"value": "175000",
+													"description": "Base Price",
+													"type": "text"
+												},
+												{
+													"key": "category_ids",
+													"value": "5",
+													"description": "Categories",
+													"type": "text"
+												},
+												{
+													"key": "location",
+													"value": "malang",
+													"description": "Location",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"description": "format jpg/png",
+													"type": "file",
+													"src": "/C:/Users/USER/Downloads/WhatsApp Image 4.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92158"
+												}
+											]
+										},
+										"description": "Fetch Products"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "[object Object]",
+															"description": "(Required) Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "<string>",
+															"description": "Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "base_price",
+															"value": "<integer>",
+															"description": "Base Price",
+															"type": "text"
+														},
+														{
+															"key": "category_ids",
+															"value": "<integer>,<integer>",
+															"description": "Categories",
+															"type": "text"
+														},
+														{
+															"key": "location",
+															"value": "<string>",
+															"description": "Location",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "<string>",
+															"description": "format jpg/png",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"name\": \"sepatu\",\n    \"description\": \"Description Sepatu\",\n    \"base_price\": 1000000,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n    \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n    \"location\": \"Bandung\",\n    \"user_id\": 1,\n    \"created_at\": \"2000-01-01T00:00:00.000Z\",\n    \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "[object Object]",
+															"description": "(Required) Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "<string>",
+															"description": "Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "base_price",
+															"value": "<integer>",
+															"description": "Base Price",
+															"type": "text"
+														},
+														{
+															"key": "category_ids",
+															"value": "<integer>,<integer>",
+															"description": "Categories",
+															"type": "text"
+														},
+														{
+															"key": "location",
+															"value": "<string>",
+															"description": "Location",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "<string>",
+															"description": "format jpg/png",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"productNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "[object Object]",
+															"description": "(Required) Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "<string>",
+															"description": "Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "base_price",
+															"value": "<integer>",
+															"description": "Base Price",
+															"type": "text"
+														},
+														{
+															"key": "category_ids",
+															"value": "<integer>,<integer>",
+															"description": "Categories",
+															"type": "text"
+														},
+														{
+															"key": "location",
+															"value": "<string>",
+															"description": "Location",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "<string>",
+															"description": "format jpg/png",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "[object Object]",
+															"description": "(Required) Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "<string>",
+															"description": "Name of Product",
+															"type": "text"
+														},
+														{
+															"key": "base_price",
+															"value": "<integer>",
+															"description": "Base Price",
+															"type": "text"
+														},
+														{
+															"key": "category_ids",
+															"value": "<integer>,<integer>",
+															"description": "Categories",
+															"type": "text"
+														},
+														{
+															"key": "location",
+															"value": "<string>",
+															"description": "Location",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "<string>",
+															"description": "format jpg/png",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Fetch Products",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQxNjMwfQ.zvQ-G7Hbva_O0kA5BQ6SmsCS9Oj9TTxCvk4BQYzzwdQ"
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "status",
+													"value": "available",
+													"description": "(Required)  (This can only be one of available,sold)",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92158"
+												}
+											]
+										},
+										"description": "Fetch Products"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "status",
+															"value": "available",
+															"description": "(Required)  (This can only be one of available,sold)",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"name\": \"sepatu\",\n    \"description\": \"Description Sepatu\",\n    \"base_price\": 1000000,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n    \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n    \"location\": \"Bandung\",\n    \"user_id\": 1,\n    \"created_at\": \"2000-01-01T00:00:00.000Z\",\n    \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "status",
+															"value": "available",
+															"description": "(Required)  (This can only be one of available,sold)",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"productNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "status",
+															"value": "available",
+															"description": "(Required)  (This can only be one of available,sold)",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "status",
+															"value": "available",
+															"description": "(Required)  (This can only be one of available,sold)",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Register Account",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92159"
+												}
+											]
+										},
+										"description": "Register Account"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"OK\",\n    \"message\": \"Product has been deleted\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"productNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Fetch Products",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQxNjMwfQ.zvQ-G7Hbva_O0kA5BQ6SmsCS9Oj9TTxCvk4BQYzzwdQ"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "sepatu",
+											"description": "(Required) Name of Product",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "dolor ipsum",
+											"description": "(Required) Name of Product",
+											"type": "text"
+										},
+										{
+											"key": "base_price",
+											"value": "200000",
+											"description": "(Required) Base Price",
+											"type": "text"
+										},
+										{
+											"key": "category_ids",
+											"value": "5",
+											"description": "(Required) Categories",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "malang",
+											"description": "(Required) Location",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "(Required) format jpg/png",
+											"type": "file",
+											"src": "/C:/Users/USER/Downloads/WhatsApp Image 4.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/seller/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"seller",
+										"product"
+									]
+								},
+								"description": "Fetch Products"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "base_price",
+													"value": "<integer>",
+													"description": "(Required) Base Price",
+													"type": "text"
+												},
+												{
+													"key": "category_ids",
+													"value": "<integer>,<integer>",
+													"description": "(Required) Categories",
+													"type": "text"
+												},
+												{
+													"key": "location",
+													"value": "<string>",
+													"description": "(Required) Location",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "(Required) format jpg/png",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"name\": \"sepatu\",\n    \"description\": \"Description Sepatu\",\n    \"base_price\": 1000000,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n    \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n    \"location\": \"Bandung\",\n    \"user_id\": 1,\n    \"created_at\": \"2000-01-01T00:00:00.000Z\",\n    \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "base_price",
+													"value": "<integer>",
+													"description": "(Required) Base Price",
+													"type": "text"
+												},
+												{
+													"key": "category_ids",
+													"value": "<integer>,<integer>",
+													"description": "(Required) Categories",
+													"type": "text"
+												},
+												{
+													"key": "location",
+													"value": "<string>",
+													"description": "(Required) Location",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "(Required) format jpg/png",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"maxProducts\",\n    \"message\": \"Max 5 products\"\n  }\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "base_price",
+													"value": "<integer>",
+													"description": "(Required) Base Price",
+													"type": "text"
+												},
+												{
+													"key": "category_ids",
+													"value": "<integer>,<integer>",
+													"description": "(Required) Categories",
+													"type": "text"
+												},
+												{
+													"key": "location",
+													"value": "<string>",
+													"description": "(Required) Location",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "(Required) format jpg/png",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "<string>",
+													"description": "(Required) Name of Product",
+													"type": "text"
+												},
+												{
+													"key": "base_price",
+													"value": "<integer>",
+													"description": "(Required) Base Price",
+													"type": "text"
+												},
+												{
+													"key": "category_ids",
+													"value": "<integer>,<integer>",
+													"description": "(Required) Categories",
+													"type": "text"
+												},
+												{
+													"key": "location",
+													"value": "<string>",
+													"description": "(Required) Location",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "<string>",
+													"description": "(Required) format jpg/png",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Register Account",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQxNjMwfQ.zvQ-G7Hbva_O0kA5BQ6SmsCS9Oj9TTxCvk4BQYzzwdQ"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/seller/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"seller",
+										"product"
+									]
+								},
+								"description": "Register Account"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"name\": \"sepatu\",\n      \"description\": \"Description Sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n      \"location\": \"Bandung\",\n      \"user_id\": 1,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"baju\",\n      \"description\": \"Description Baju\",\n      \"base_price\": 500000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-baju.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-baju.jpg\",\n      \"location\": \"Bandung\",\n      \"user_id\": 1,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n      \"categories\": [\n        {\n          \"id\": 1,\n          \"name\": \"Fashion\"\n        },\n        {\n          \"id\": 2,\n          \"name\": \"Otomotif\"\n        },\n        {\n          \"id\": 3,\n          \"name\": \"Electronic\"\n        },\n        {\n          \"id\": 4,\n          \"name\": \"Food\"\n        }\n      ]\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"product"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Fetch Order By ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Fetch Order By ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"buyer_id\": 2,\n    \"price\": 500000,\n    \"product_name\": \"Sepatu\",\n    \"base_price\": 1000000,\n    \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n    \"status\": \"pending\",\n    \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n    \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n    \"Product\": {\n      \"id\": 2,\n      \"name\": \"Sepatu\",\n      \"description\": \"desc sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n      \"image_name\": \"PR-1556505199383-add.png\",\n      \"location\": \"Jakarta\",\n      \"user_id\": 1,\n      \"status\": \"available\",\n      \"User\": {\n        \"id\": 1,\n        \"full_name\": \"John Doe\",\n        \"email\": \"johndoe@mail.com\",\n        \"phone_number\": 81121934455,\n        \"address\": \"Mampang Prpt.\",\n        \"city\": \"Jakarta\"\n      }\n    },\n    \"User\": {\n      \"id\": 2,\n      \"full_name\": \"Michael\",\n      \"email\": \"michael@mail.com\",\n      \"phone_number\": 81121934466,\n      \"address\": \"Dago\",\n      \"city\": \"Bandung\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Edit Order By ID",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "status",
+													"value": "accepted",
+													"description": " (This can only be one of accepted,declined)",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/seller/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										},
+										"description": "Edit Order By ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "status",
+															"value": "accepted",
+															"description": " (This can only be one of accepted,declined)",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/seller/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"buyer_id\": 2,\n    \"price\": 500000,\n    \"transcaction_date\": \"2022-07-02T17:26:29.984Z\",\n    \"product_name\": \"Sepatu\",\n    \"base_price\": 1000000,\n    \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n    \"status\": \"declined\",\n    \"user_id\": 1,\n    \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n    \"updatedAt\": \"2022-07-02T17:26:29.984Z\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "product",
+							"item": [
+								{
+									"name": "{product_id}",
+									"item": [
+										{
+											"name": "Fetch Order By Product ID",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ5OTA0fQ.mkpzjxZC8xW3zK1lv6EQ7oQoVMpZCGLjbMRGwEH0FDQ"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/seller/order/product/:product_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"seller",
+														"order",
+														"product",
+														":product_id"
+													],
+													"variable": [
+														{
+															"key": "product_id",
+															"value": "92159"
+														}
+													]
+												},
+												"description": "Fetch Order By Product ID"
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"description": "(Required) ",
+																"key": "access_token",
+																"value": ""
+															},
+															{
+																"key": "Accept",
+																"value": "body"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/seller/order/product/:product_id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"seller",
+																"order",
+																"product",
+																":product_id"
+															],
+															"variable": [
+																{
+																	"key": "product_id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "body"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"buyer_id\": 2,\n    \"price\": 500000,\n    \"product_name\": \"Sepatu\",\n    \"base_price\": 1000000,\n    \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n    \"status\": \"pending\",\n    \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n    \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n    \"Product\": {\n      \"id\": 2,\n      \"name\": \"Sepatu\",\n      \"description\": \"desc sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n      \"image_name\": \"PR-1556505199383-add.png\",\n      \"location\": \"Jakarta\",\n      \"user_id\": 1,\n      \"status\": \"available\",\n      \"User\": {\n        \"id\": 1,\n        \"full_name\": \"John Doe\",\n        \"email\": \"johndoe@mail.com\",\n        \"phone_number\": 81121934455,\n        \"address\": \"Mampang Prpt.\",\n        \"city\": \"Jakarta\"\n      }\n    },\n    \"User\": {\n      \"id\": 2,\n      \"full_name\": \"Michael\",\n      \"email\": \"michael@mail.com\",\n      \"phone_number\": 81121934466,\n      \"address\": \"Dago\",\n      \"city\": \"Bandung\"\n    }\n  }\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get Orders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ5OTA0fQ.mkpzjxZC8xW3zK1lv6EQ7oQoVMpZCGLjbMRGwEH0FDQ"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/seller/order?status=available",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"seller",
+										"order"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "available"
+										}
+									]
+								},
+								"description": "Get Orders"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/seller/order?status=declined",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"seller",
+												"order"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": "declined"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"product_id\": 1,\n      \"buyer_id\": 2,\n      \"price\": 500000,\n      \"product_name\": \"Sepatu\",\n      \"base_price\": 1000000,\n      \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n      \"status\": \"pending\",\n      \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n      \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n      \"Product\": {\n        \"id\": 2,\n        \"name\": \"Sepatu\",\n        \"description\": \"desc sepatu\",\n        \"base_price\": 1000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n        \"image_name\": \"PR-1556505199383-add.png\",\n        \"location\": \"Jakarta\",\n        \"user_id\": 1,\n        \"status\": \"available\",\n        \"User\": {\n          \"id\": 1,\n          \"full_name\": \"John Doe\",\n          \"email\": \"johndoe@mail.com\",\n          \"phone_number\": 81121934455,\n          \"address\": \"Mampang Prpt.\",\n          \"city\": \"Jakarta\"\n        }\n      },\n      \"User\": {\n        \"id\": 2,\n        \"full_name\": \"Michael\",\n        \"email\": \"michael@mail.com\",\n        \"phone_number\": 81121934466,\n        \"address\": \"Dago\",\n        \"city\": \"Bandung\"\n      }\n    },\n    {\n      \"id\": 2,\n      \"product_id\": 2,\n      \"buyer_id\": 3,\n      \"price\": 4000000,\n      \"transcaction_date\": \"2022-07-02T17:26:29.984Z\",\n      \"product_name\": \"Mobile Phone\",\n      \"base_price\": 5000000,\n      \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-3556505199383-add.png?alt=media\",\n      \"status\": \"accepted\",\n      \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n      \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n      \"Product\": {\n        \"id\": 2,\n        \"name\": \"Sepatu\",\n        \"description\": \"desc sepatu\",\n        \"base_price\": 1000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n        \"image_name\": \"PR-1556505199383-add.png\",\n        \"location\": \"Jakarta\",\n        \"user_id\": 1,\n        \"status\": \"available\",\n        \"User\": {\n          \"id\": 1,\n          \"full_name\": \"John Doe\",\n          \"email\": \"johndoe@mail.com\",\n          \"phone_number\": 81121934455,\n          \"address\": \"Mampang Prpt.\",\n          \"city\": \"Jakarta\"\n        }\n      },\n      \"User\": {\n        \"id\": 2,\n        \"full_name\": \"Victorious\",\n        \"email\": \"victirious@mail.com\",\n        \"phone_number\": 81121934477,\n        \"address\": \"Buah Batu\",\n        \"city\": \"Bandung\"\n      }\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "buyer",
+			"item": [
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Fetch Product By ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92159"
+												}
+											]
+										},
+										"description": "Fetch Product By ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"name\": \"sepatu\",\n    \"description\": \"Description Sepatu\",\n    \"base_price\": 1000000,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n    \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n    \"location\": \"Bandung\",\n    \"user_id\": 1,\n    \"created_at\": \"2000-01-01T00:00:00.000Z\",\n    \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n    \"categories\": [\n      {\n        \"id\": 1,\n        \"name\": \"Fashion\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Otomotif\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Electronic\"\n      },\n      {\n        \"id\": 4,\n        \"name\": \"Food\"\n      }\n    ]\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"productNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Fetch Products",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/buyer/product?status=available&category_id=5&search=sepatu&page=1&per_page=3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"buyer",
+										"product"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "available"
+										},
+										{
+											"key": "category_id",
+											"value": "5"
+										},
+										{
+											"key": "search",
+											"value": "sepatu"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "3"
+										}
+									]
+								},
+								"description": "Fetch Products"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/product?status=&category_id=&search=&page=&per_page=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"product"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": ""
+												},
+												{
+													"key": "category_id",
+													"value": ""
+												},
+												{
+													"key": "search",
+													"value": ""
+												},
+												{
+													"key": "page",
+													"value": ""
+												},
+												{
+													"key": "per_page",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"name\": \"sepatu\",\n      \"description\": \"Description Sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n      \"location\": \"Bandung\",\n      \"user_id\": 1,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n      \"categories\": [\n        {\n          \"id\": 1,\n          \"name\": \"Fashion\"\n        },\n        {\n          \"id\": 2,\n          \"name\": \"Otomotif\"\n        },\n        {\n          \"id\": 3,\n          \"name\": \"Electronic\"\n        },\n        {\n          \"id\": 4,\n          \"name\": \"Food\"\n        }\n      ]\n    },\n    {\n      \"id\": 2,\n      \"name\": \"baju\",\n      \"base_price\": 500000,\n      \"description\": \"Description Baju\",\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-baju.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-baju.jpg\",\n      \"location\": \"Bandung\",\n      \"user_id\": 1,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n      \"categories\": [\n        {\n          \"id\": 1,\n          \"name\": \"Fashion\"\n        },\n        {\n          \"id\": 2,\n          \"name\": \"Otomotif\"\n        },\n        {\n          \"id\": 3,\n          \"name\": \"Electronic\"\n        },\n        {\n          \"id\": 4,\n          \"name\": \"Food\"\n        }\n      ]\n    }\n  ]\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/product?status=&category_id=&search=&page=&per_page=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"product"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": ""
+												},
+												{
+													"key": "category_id",
+													"value": ""
+												},
+												{
+													"key": "search",
+													"value": ""
+												},
+												{
+													"key": "page",
+													"value": ""
+												},
+												{
+													"key": "per_page",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Fetch Order By ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vbW9jaGlyYXBwYTMyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ4MTI1fQ.0Y4IGP3F-yjrSEhxPJ0DqnVb6hbgzhmPRALQB_viyp4"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "92159"
+												}
+											]
+										},
+										"description": "Fetch Order By ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"buyer_id\": 2,\n    \"price\": 500000,\n    \"product_name\": \"Sepatu\",\n    \"base_price\": 1000000,\n    \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n    \"status\": \"pending\",\n    \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n    \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n    \"Product\": {\n      \"id\": 2,\n      \"name\": \"Sepatu\",\n      \"description\": \"desc sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n      \"image_name\": \"PR-1556505199383-add.png\",\n      \"location\": \"Jakarta\",\n      \"user_id\": 1,\n      \"status\": \"available\",\n      \"User\": {\n        \"id\": 1,\n        \"full_name\": \"John Doe\",\n        \"email\": \"johndoe@mail.com\",\n        \"phone_number\": 81121934455,\n        \"address\": \"Mampang Prpt.\",\n        \"city\": \"Jakarta\"\n      }\n    },\n    \"User\": {\n      \"id\": 2,\n      \"full_name\": \"Michael\",\n      \"email\": \"michael@mail.com\",\n      \"phone_number\": 81121934466,\n      \"address\": \"Dago\",\n      \"city\": \"Bandung\"\n    }\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Edit Order By Id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vbW9jaGlyYXBwYTMyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ1MjI5fQ.d7etcsbBlCR77uv14yiDlMsGxVC4Tdipre7xkCb7yHs"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"bid_price\": \"150000\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "43664"
+												}
+											]
+										},
+										"description": "Edit Order By Id"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"bid_price\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/buyer/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"buyer_id\": 2,\n    \"price\": 800000,\n    \"product_name\": \"Sepatu\",\n    \"base_price\": 1000000,\n    \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n    \"status\": \"pending\",\n    \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n    \"updatedAt\": \"2022-07-02T17:26:29.984Z\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"bid_price\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/buyer/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete Order By ID",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrYmFyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ4NTcxfQ.M5BNhuTLlCXXLKOBtwPtEGy4Ksvv0ezV9QOfGPhSBok"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										},
+										"description": "Delete Order By ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/order/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"order",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Create Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vbW9jaGlyYXBwYTMyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ5MDM1fQ.55bwig82gxGmvnpTeOwe4KwU8BFjpWqNM8hxvA6sCpg"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"product_id\": \"92159\",\n  \"bid_price\": \"150000\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/buyer/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"buyer",
+										"order"
+									]
+								},
+								"description": "Create Order"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"product_id\": \"<integer>\",\n  \"bid_price\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"buyer_id\": 2,\n    \"price\": 800000,\n    \"product_name\": \"Sepatu\",\n    \"base_price\": 1000000,\n    \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n    \"status\": \"pending\",\n    \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n    \"updatedAt\": \"2022-07-02T17:26:29.984Z\"\n  }\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"product_id\": \"<integer>\",\n  \"bid_price\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"Bad Request\",\n    \"message\": \"you has order for this product\"\n  }\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"product_id\": \"<integer>\",\n  \"bid_price\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"product_id\": \"<integer>\",\n  \"bid_price\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Fetch Orders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vbW9jaGlyYXBwYTMyQG1haWwuY29tIiwiaWF0IjoxNjk2MDQ5MDM1fQ.55bwig82gxGmvnpTeOwe4KwU8BFjpWqNM8hxvA6sCpg"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/buyer/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"buyer",
+										"order"
+									]
+								},
+								"description": "Fetch Orders"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"order"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"product_id\": 1,\n      \"buyer_id\": 2,\n      \"price\": 500000,\n      \"product_name\": \"Sepatu\",\n      \"base_price\": 1000000,\n      \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n      \"status\": \"pending\",\n      \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n      \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n      \"Product\": {\n        \"id\": 2,\n        \"name\": \"Sepatu\",\n        \"description\": \"desc sepatu\",\n        \"base_price\": 1000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1556505199383-add.png?alt=media\",\n        \"image_name\": \"PR-1556505199383-add.png\",\n        \"location\": \"Jakarta\",\n        \"user_id\": 1,\n        \"status\": \"available\",\n        \"User\": {\n          \"id\": 1,\n          \"full_name\": \"John Doe\",\n          \"email\": \"johndoe@mail.com\",\n          \"phone_number\": 81121934455,\n          \"address\": \"Mampang Prpt.\",\n          \"city\": \"Jakarta\"\n        }\n      },\n      \"User\": {\n        \"id\": 2,\n        \"full_name\": \"Michael\",\n        \"email\": \"michael@mail.com\",\n        \"phone_number\": 81121934466,\n        \"address\": \"Dago\",\n        \"city\": \"Bandung\"\n      }\n    },\n    {\n      \"id\": 2,\n      \"product_id\": 2,\n      \"buyer_id\": 2,\n      \"price\": 4000000,\n      \"transcaction_date\": \"2022-07-02T17:26:29.984Z\",\n      \"product_name\": \"Mobile Phone\",\n      \"base_price\": 5000000,\n      \"image_product\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-3556505199383-add.png?alt=media\",\n      \"status\": \"accepted\",\n      \"createdAt\": \"2022-07-02T17:26:29.984Z\",\n      \"updatedAt\": \"2022-07-02T17:26:29.984Z\",\n      \"Product\": {\n        \"id\": 2,\n        \"name\": \"Mobile Phone\",\n        \"description\": \"desc mobile phone\",\n        \"base_price\": 5000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-3556505199383-add.png?alt=media\",\n        \"image_name\": \"PR-3556505199383-add.png\",\n        \"location\": \"Surabaya\",\n        \"user_id\": 3,\n        \"status\": \"sold\",\n        \"User\": {\n          \"id\": 3,\n          \"full_name\": \"Victorious\",\n          \"email\": \"victorious@mail.com\",\n          \"phone_number\": 81121934477,\n          \"address\": \"Gubeng\",\n          \"city\": \"Surabaya\"\n        }\n      },\n      \"User\": {\n        \"id\": 2,\n        \"full_name\": \"Michael\",\n        \"email\": \"michael@mail.com\",\n        \"phone_number\": 81121934466,\n        \"address\": \"Dago\",\n        \"city\": \"Bandung\"\n      }\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "wishlist",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "GET Wishlist by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										},
+										"description": "GET Wishlist by ID"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"user_id\": 1,\n    \"Product\": {\n      \"name\": \"sepatu\",\n      \"description\": \"Description Sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n      \"location\": \"Bandung\",\n      \"user_id\": 1,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n    }\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"wishlistNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "delete Wishlist",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										},
+										"description": "delete Wishlist"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"OK\",\n    \"message\": \"Wishlist success Removed.\"\n  }\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"wishlistNotFound\",\n    \"message\": \"Product is not found\"\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													},
+													{
+														"key": "Accept",
+														"value": "body"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "body"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+										},
+										{
+											"name": "Internal Service Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "access_token",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/buyer/wishlist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"buyer",
+														"wishlist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Add Wishlist",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_id",
+											"value": "<integer>",
+											"description": "(Required) Product ID",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/buyer/wishlist",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"buyer",
+										"wishlist"
+									]
+								},
+								"description": "Add Wishlist"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "<integer>",
+													"description": "(Required) Product ID",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"OK\",\n    \"Product\": {\n      \"id\": 1,\n      \"name\": \"sepatu\",\n      \"description\": \"Description Sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n      \"location\": \"Bandung\",\n      \"user_id\": 1,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n    }\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "<integer>",
+													"description": "(Required) Product ID",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Fetch All Wishlists",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/buyer/wishlist",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"buyer",
+										"wishlist"
+									]
+								},
+								"description": "Fetch All Wishlists"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"product_id\": 1,\n      \"user_id\": 1,\n      \"Product\": {\n        \"name\": \"sepatu\",\n        \"description\": \"Description Sepatu\",\n        \"base_price\": 1000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n        \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n        \"location\": \"Bandung\",\n        \"user_id\": 1,\n        \"created_at\": \"2000-01-01T00:00:00.000Z\",\n        \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n      }\n    },\n    {\n      \"id\": 2,\n      \"product_id\": 2,\n      \"user_id\": 1,\n      \"Product\": {\n        \"name\": \"baju\",\n        \"description\": \"Description Baju\",\n        \"base_price\": 500000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-baju.jpg?alt=media\",\n        \"image_name\": \"PR-1654962957757-baju.jpg\",\n        \"location\": \"Bandung\",\n        \"user_id\": 1,\n        \"created_at\": \"2000-01-01T00:00:00.000Z\",\n        \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n      }\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"name\": \"notLogin\",\n    \"message\": \"You are not login/access_token is wrong\"\n  }\n}"
+								},
+								{
+									"name": "Internal Service Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/buyer/wishlist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"buyer",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Register Account",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/history/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"history",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "Register Account"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/history/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"history",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_name\": \"Sepatu\",\n    \"price\": 1000000,\n    \"category\": \"bought\",\n    \"transaction_date\": \"2022-07-02T05:30:03.600Z\",\n    \"status\": \"declined\",\n    \"user_id\": 2,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/banner%2PRO-1656829041345-Premier_league.png?alt=media\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Register Account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "access_token",
+								"value": ""
+							},
+							{
+								"key": "Accept",
+								"value": "body"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/history",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"history"
+							]
+						},
+						"description": "Register Account"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/history",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "body"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"product_name\": \"Sepatu\",\n      \"price\": 1000000,\n      \"category\": \"bought\",\n      \"transaction_date\": \"2022-07-02T05:30:03.600Z\",\n      \"status\": \"declined\",\n      \"user_id\": 2,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/banner%2PRO-1656829041345-Premier_league.png?alt=media\"\n    },\n    {\n      \"id\": 2,\n      \"product_name\": \"Baju\",\n      \"price\": 500000,\n      \"category\": \"bought\",\n      \"transaction_date\": \"2022-07-02T05:30:03.600Z\",\n      \"status\": \"accepted\",\n      \"user_id\": 2,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/banner%2PRO-1656829041325-Premier_league.png?alt=media\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notification",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Fetch Notification By ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/notification/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"notification",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "Fetch Notification By ID"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notification/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notification",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"product_name\": \"Sepatu\",\n    \"bid_price\": 1000000,\n    \"transaction_date\": \"2000-01-01T00:00:00.000Z\",\n    \"status\": \"bid\",\n    \"seller_name\": \"john_doe\",\n    \"buyer_name\": \"michael\",\n    \"receiver_id\": 1,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n    \"read\": false,\n    \"created_at\": \"2000-01-01T00:00:00.000Z\",\n    \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n    \"Product\": {\n      \"id\": 1,\n      \"name\": \"Sepatu\",\n      \"base_price\": 1000000,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n      \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n      \"location\": \"Jakarta\",\n      \"user_id\": 1,\n      \"status\": \"available\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Fetch Notification By ID",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/notification/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"notification",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "Fetch Notification By ID"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "(Required) ",
+												"key": "access_token",
+												"value": ""
+											},
+											{
+												"key": "Accept",
+												"value": "body"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notification/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notification",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "body"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"id\": 1,\n    \"product_id\": 1,\n    \"bid_price\": 1000000,\n    \"transaction_date\": \"2000-01-01T00:00:00.000Z\",\n    \"status\": \"bid\",\n    \"seller_name\": \"john_doe\",\n    \"buyer_name\": \"michael\",\n    \"receiver_id\": 2,\n    \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n    \"read\": true,\n    \"created_at\": \"2000-01-01T00:00:00.000Z\",\n    \"updated_at\": \"2000-01-01T00:00:00.000Z\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Fetch Notifications",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "access_token",
+								"value": ""
+							},
+							{
+								"key": "Accept",
+								"value": "body"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/notification?notification_type=seller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notification"
+							],
+							"query": [
+								{
+									"key": "notification_type",
+									"value": "seller"
+								}
+							]
+						},
+						"description": "Fetch Notifications"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "access_token",
+										"value": ""
+									},
+									{
+										"key": "Accept",
+										"value": "body"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/notification?notification_type=seller",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"notification"
+									],
+									"query": [
+										{
+											"key": "notification_type",
+											"value": "seller"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "body"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"example\": [\n    {\n      \"id\": 1,\n      \"product_id\": 1,\n      \"product_name\": \"Sepatu\",\n      \"bid_price\": 1000000,\n      \"transaction_date\": \"2000-01-01T00:00:00.000Z\",\n      \"status\": \"bid\",\n      \"seller_name\": \"john_doe\",\n      \"buyer_name\": \"michael\",\n      \"receiver_id\": 1,\n      \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n      \"read\": false,\n      \"created_at\": \"2000-01-01T00:00:00.000Z\",\n      \"updated_at\": \"2000-01-01T00:00:00.000Z\",\n      \"Product\": {\n        \"id\": 1,\n        \"name\": \"Sepatu\",\n        \"base_price\": 1000000,\n        \"image_url\": \"https://firebasestorage.googleapis.com/v0/b/market-final-project.appspot.com/o/products%2FPR-1654962957757-sepatu.jpg?alt=media\",\n        \"image_name\": \"PR-1654962957757-sepatu.jpg\",\n        \"location\": \"Jakarta\",\n        \"user_id\": 1,\n        \"status\": \"available\"\n      }\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://market-final-project.binaracademy.org/"
+		}
+	]
+}

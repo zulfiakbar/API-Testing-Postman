@@ -1,0 +1,1549 @@
+{
+	"info": {
+		"_postman_id": "df67f470-c418-433e-aa54-c0a607c7d011",
+		"name": "Secondhand API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21528514"
+	},
+	"item": [
+		{
+			"name": "users.json",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": {\n    \"name\": \"zulfi\",\n    \"email\": \"onepiece@gmail.com\",\n    \"password\": \"12345678\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User registered",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": {\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users.json"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"user\": {\n          \"id\": 19,\n          \"name\": \"Enigma\",\n          \"email\": \"long@legros.info\"\n        },\n        \"session\": {\n          \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxOSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY3ODI2ODg3NiwiZXhwIjoxNjc5NDc4NDc2LCJqdGkiOiI2OTJjZWRmYy1hODc2LTQ3NjEtYjAyMi0wYWU2YTFmNmVlMTgifQ.-GYBROEpnwXhFYkOlxuz1RDAxWOLC48zQdOuHKVjYGM\"\n        }\n      }\n    }\n  }\n}"
+						},
+						{
+							"name": "Email already taken",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": {\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users.json"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"email_already_taken\": {\n      \"value\": {\n        \"errors\": {\n          \"email\": [\n            \"has already been taken\"\n          ]\n        }\n      }\n    }\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "sign_in.json",
+					"item": [
+						{
+							"name": "Session",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user\": {\n    \"email\": \"onepiece@gmail.com\",\n    \"password\": \"12345678\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/sign_in.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"sign_in.json"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Session created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/sign_in.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"sign_in.json"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"user\": {\n          \"id\": 21,\n          \"name\": \"Ancient Apparition\",\n          \"email\": \"stephan.wolf@casper.biz\",\n          \"phone_number\": \"+2368737844701\",\n          \"address\": \"8555 Akilah Knolls, North Caroyln, AZ 34610-5619\",\n          \"city\": {\n            \"id\": 15,\n            \"name\": \"Ivarstead\"\n          },\n          \"avatar\": {\n            \"filename\": \"avatar.png\",\n            \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8b0399aff362c936c48b9cd74ebcb73a45985005/avatar.png\"\n          }\n        },\n        \"session\": {\n          \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY3ODI2ODg3NiwiZXhwIjoxNjc5NDc4NDc2LCJqdGkiOiIyNDMxY2M1Ni1lM2JjLTQ3MWItYmNmNC04ZGE3MDk5MjhkMzQifQ.fMOny_QREuxiqxjqrthRRc2g_QGmjlexCLKCzxFcYMk\"\n        }\n      }\n    }\n  }\n}"
+								},
+								{
+									"name": "Wrong Password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/sign_in.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"sign_in.json"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"examples\": {\n    \"email_not_found\": {\n      \"value\": {\n        \"error\": \"Invalid Email or password.\"\n      }\n    },\n    \"wrong_password\": {\n      \"value\": {\n        \"error\": \"Invalid Email or password.\"\n      }\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{user_id}",
+					"item": [
+						{
+							"name": "offers.json",
+							"item": [
+								{
+									"name": "List Offers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk3ODE5MywiZXhwIjoxNjk3MTg3NzkzLCJqdGkiOiJhODY5Zjg3YS04ODkzLTQ0YTEtYjYyNC1kMGMyZTZmZTAyOWEifQ.PjVAX7FXcKr2_nna42nrwa5OUjbPOvfB42497qLHHxE}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:user_id/offers.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":user_id",
+												"offers.json"
+											],
+											"variable": [
+												{
+													"key": "user_id",
+													"value": "77331"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Offer listed",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/users/:user_id/offers.json",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														":user_id",
+														"offers.json"
+													],
+													"variable": [
+														{
+															"key": "user_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"meta\": {\n          \"page_size\": 10,\n          \"page_count\": 1,\n          \"total\": 5\n        },\n        \"offers\": [\n          {\n            \"id\": 13,\n            \"price\": 127737,\n            \"status\": \"initiated\",\n            \"created_at\": \"2023-03-08T09:47:56.416Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.416Z\",\n            \"product\": {\n              \"id\": 37,\n              \"name\": \"Morbid Mask\",\n              \"price\": 107458,\n              \"description\": \"Et nemo tenetur. Modi quia est. Eius officiis nulla.\",\n              \"category_id\": 24,\n              \"user_id\": 25,\n              \"created_at\": \"2023-03-08T09:47:56.396Z\",\n              \"updated_at\": \"2023-03-08T09:47:56.400Z\",\n              \"url\": \"http://www.example.com/products/37.json\",\n              \"user\": {\n                \"id\": 25,\n                \"name\": \"Lone Druid\",\n                \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n                \"phone_number\": \"+8117132900906\",\n                \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n                \"city\": {\n                  \"id\": 18,\n                  \"name\": \"Morthal\"\n                },\n                \"avatar\": {\n                  \"filename\": \"avatar.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n                }\n              },\n              \"images\": [\n                {\n                  \"filename\": \"sample01.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBadz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8ace7d1290e3846f9e60a06f5a3e6e02d1b2ab97/sample01.png\"\n                },\n                {\n                  \"filename\": \"sample02.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--28f9d1c36430ff7a0f351c4313fd980df7dd6997/sample02.png\"\n                }\n              ]\n            },\n            \"to\": {\n              \"id\": 25,\n              \"name\": \"Lone Druid\",\n              \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n              \"phone_number\": \"+8117132900906\",\n              \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n              }\n            },\n            \"from\": {\n              \"id\": 26,\n              \"name\": \"Bristleback\",\n              \"email\": \"jaime@nitzsche.biz\",\n              \"phone_number\": \"+24417561834673\",\n              \"address\": \"906 Kirstie Corner, East Zackary, MO 96753\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--233ff8a02cb942b375eb4a22a91d4381d819bb2d/avatar.png\"\n              }\n            }\n          },\n          {\n            \"id\": 12,\n            \"price\": 168357,\n            \"status\": \"initiated\",\n            \"created_at\": \"2023-03-08T09:47:56.415Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.415Z\",\n            \"product\": {\n              \"id\": 36,\n              \"name\": \"Blight Stone\",\n              \"price\": 91474,\n              \"description\": \"Debitis culpa perferendis. Voluptates cum consectetur. Reprehenderit quis sed.\",\n              \"category_id\": 24,\n              \"user_id\": 25,\n              \"created_at\": \"2023-03-08T09:47:56.388Z\",\n              \"updated_at\": \"2023-03-08T09:47:56.391Z\",\n              \"url\": \"http://www.example.com/products/36.json\",\n              \"user\": {\n                \"id\": 25,\n                \"name\": \"Lone Druid\",\n                \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n                \"phone_number\": \"+8117132900906\",\n                \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n                \"city\": {\n                  \"id\": 18,\n                  \"name\": \"Morthal\"\n                },\n                \"avatar\": {\n                  \"filename\": \"avatar.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n                }\n              },\n              \"images\": [\n                {\n                  \"filename\": \"sample01.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBaUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a290e2454a3b989ea71cdb84ef3b33da05a8a4a9/sample01.png\"\n                },\n                {\n                  \"filename\": \"sample02.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBaZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2b010da3daef846451edf1fea306877261abfd0f/sample02.png\"\n                }\n              ]\n            },\n            \"to\": {\n              \"id\": 25,\n              \"name\": \"Lone Druid\",\n              \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n              \"phone_number\": \"+8117132900906\",\n              \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n              }\n            },\n            \"from\": {\n              \"id\": 26,\n              \"name\": \"Bristleback\",\n              \"email\": \"jaime@nitzsche.biz\",\n              \"phone_number\": \"+24417561834673\",\n              \"address\": \"906 Kirstie Corner, East Zackary, MO 96753\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--233ff8a02cb942b375eb4a22a91d4381d819bb2d/avatar.png\"\n              }\n            }\n          },\n          {\n            \"id\": 11,\n            \"price\": 39667,\n            \"status\": \"initiated\",\n            \"created_at\": \"2023-03-08T09:47:56.414Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.414Z\",\n            \"product\": {\n              \"id\": 35,\n              \"name\": \"Drum of Endurance\",\n              \"price\": 107772,\n              \"description\": \"Et ut aut. Velit quis quam. Id odio voluptatibus.\",\n              \"category_id\": 24,\n              \"user_id\": 25,\n              \"created_at\": \"2023-03-08T09:47:56.379Z\",\n              \"updated_at\": \"2023-03-08T09:47:56.383Z\",\n              \"url\": \"http://www.example.com/products/35.json\",\n              \"user\": {\n                \"id\": 25,\n                \"name\": \"Lone Druid\",\n                \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n                \"phone_number\": \"+8117132900906\",\n                \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n                \"city\": {\n                  \"id\": 18,\n                  \"name\": \"Morthal\"\n                },\n                \"avatar\": {\n                  \"filename\": \"avatar.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n                }\n              },\n              \"images\": [\n                {\n                  \"filename\": \"sample01.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c543c8b49850ad801d6fe19e4de21357b35c577d/sample01.png\"\n                },\n                {\n                  \"filename\": \"sample02.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBaQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d3b84ea1ff2968b07e6af901112e7272e0f59c02/sample02.png\"\n                }\n              ]\n            },\n            \"to\": {\n              \"id\": 25,\n              \"name\": \"Lone Druid\",\n              \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n              \"phone_number\": \"+8117132900906\",\n              \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n              }\n            },\n            \"from\": {\n              \"id\": 26,\n              \"name\": \"Bristleback\",\n              \"email\": \"jaime@nitzsche.biz\",\n              \"phone_number\": \"+24417561834673\",\n              \"address\": \"906 Kirstie Corner, East Zackary, MO 96753\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--233ff8a02cb942b375eb4a22a91d4381d819bb2d/avatar.png\"\n              }\n            }\n          },\n          {\n            \"id\": 10,\n            \"price\": 166339,\n            \"status\": \"initiated\",\n            \"created_at\": \"2023-03-08T09:47:56.413Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.413Z\",\n            \"product\": {\n              \"id\": 34,\n              \"name\": \"Dust of Appearance\",\n              \"price\": 95584,\n              \"description\": \"Culpa nostrum aut. Delectus inventore tenetur. Sed ex veniam.\",\n              \"category_id\": 24,\n              \"user_id\": 25,\n              \"created_at\": \"2023-03-08T09:47:56.370Z\",\n              \"updated_at\": \"2023-03-08T09:47:56.374Z\",\n              \"url\": \"http://www.example.com/products/34.json\",\n              \"user\": {\n                \"id\": 25,\n                \"name\": \"Lone Druid\",\n                \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n                \"phone_number\": \"+8117132900906\",\n                \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n                \"city\": {\n                  \"id\": 18,\n                  \"name\": \"Morthal\"\n                },\n                \"avatar\": {\n                  \"filename\": \"avatar.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n                }\n              },\n              \"images\": [\n                {\n                  \"filename\": \"sample01.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2818ea88ec0ae1aceb30e40578ca7dcbe547fc81/sample01.png\"\n                },\n                {\n                  \"filename\": \"sample02.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7512e8a20b6ac1458ce1b9147231974f1461fe53/sample02.png\"\n                }\n              ]\n            },\n            \"to\": {\n              \"id\": 25,\n              \"name\": \"Lone Druid\",\n              \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n              \"phone_number\": \"+8117132900906\",\n              \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n              }\n            },\n            \"from\": {\n              \"id\": 26,\n              \"name\": \"Bristleback\",\n              \"email\": \"jaime@nitzsche.biz\",\n              \"phone_number\": \"+24417561834673\",\n              \"address\": \"906 Kirstie Corner, East Zackary, MO 96753\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--233ff8a02cb942b375eb4a22a91d4381d819bb2d/avatar.png\"\n              }\n            }\n          },\n          {\n            \"id\": 9,\n            \"price\": 122519,\n            \"status\": \"initiated\",\n            \"created_at\": \"2023-03-08T09:47:56.412Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.412Z\",\n            \"product\": {\n              \"id\": 33,\n              \"name\": \"Wind Lace\",\n              \"price\": 98382,\n              \"description\": \"Quos corrupti et. Consequatur provident rerum. Vel reprehenderit a.\",\n              \"category_id\": 24,\n              \"user_id\": 25,\n              \"created_at\": \"2023-03-08T09:47:56.362Z\",\n              \"updated_at\": \"2023-03-08T09:47:56.365Z\",\n              \"url\": \"http://www.example.com/products/33.json\",\n              \"user\": {\n                \"id\": 25,\n                \"name\": \"Lone Druid\",\n                \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n                \"phone_number\": \"+8117132900906\",\n                \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n                \"city\": {\n                  \"id\": 18,\n                  \"name\": \"Morthal\"\n                },\n                \"avatar\": {\n                  \"filename\": \"avatar.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n                }\n              },\n              \"images\": [\n                {\n                  \"filename\": \"sample01.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ba96c1674a593376b279c257f3e3d3a054a9ab7d/sample01.png\"\n                },\n                {\n                  \"filename\": \"sample02.png\",\n                  \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3cb4e0519b5d919e76e2afe99abd4a9ea64129f3/sample02.png\"\n                }\n              ]\n            },\n            \"to\": {\n              \"id\": 25,\n              \"name\": \"Lone Druid\",\n              \"email\": \"patricia.ullrich@wilkinson-schulist.name\",\n              \"phone_number\": \"+8117132900906\",\n              \"address\": \"Suite 606 70603 Kshlerin Pike, Gerriton, LA 33325-0825\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2adc48a445772fb525a85df947f32b3094181979/avatar.png\"\n              }\n            },\n            \"from\": {\n              \"id\": 26,\n              \"name\": \"Bristleback\",\n              \"email\": \"jaime@nitzsche.biz\",\n              \"phone_number\": \"+24417561834673\",\n              \"address\": \"906 Kirstie Corner, East Zackary, MO 96753\",\n              \"city\": {\n                \"id\": 18,\n                \"name\": \"Morthal\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--233ff8a02cb942b375eb4a22a91d4381d819bb2d/avatar.png\"\n              }\n            }\n          }\n        ]\n      }\n    }\n  }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categories.json",
+			"item": [
+				{
+					"name": "List Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/categories.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categories.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category Listed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categories.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories.json"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"categories\": [\n          {\n            \"id\": 17,\n            \"name\": \"Feral Falmer\",\n            \"url\": \"http://www.example.com/categories/17\"\n          },\n          {\n            \"id\": 18,\n            \"name\": \"Skeleton\",\n            \"url\": \"http://www.example.com/categories/18\"\n          },\n          {\n            \"id\": 19,\n            \"name\": \"Wisp\",\n            \"url\": \"http://www.example.com/categories/19\"\n          },\n          {\n            \"id\": 20,\n            \"name\": \"Slaughterfish\",\n            \"url\": \"http://www.example.com/categories/20\"\n          },\n          {\n            \"id\": 21,\n            \"name\": \"Spider Guardian\",\n            \"url\": \"http://www.example.com/categories/21\"\n          }\n        ]\n      }\n    }\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "{id}.json",
+					"item": [
+						{
+							"name": "Get Category",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories/1.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										"1.json"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Category Retrieved",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categories/{{id}}.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												"{{id}}.json"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"category\": {\n          \"id\": 22,\n          \"name\": \"Spriggan\",\n          \"url\": \"http://www.example.com/categories/22\"\n        }\n      }\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "offers.json",
+			"item": [
+				{
+					"name": "Create Offer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk5Mjg4NywiZXhwIjoxNjk3MjAyNDg3LCJqdGkiOiI0MzIzMDJiMi1kMmNkLTQzNjMtYTI3NS01ZDc0MzU3OGQwMzAifQ.ogdgnd8M1iLEVkEcJzZb0CjpJi-ziwQoId3K4EkEVfE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"offer\": {\n    \"price\": \"100000\",\n    \"to_id\": \"77373\",\n    \"product_id\": \"41114\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/offers.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"offers.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Offer created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"offer\": {\n    \"price\": \"<number>\",\n    \"to_id\": \"<number>\",\n    \"product_id\": \"<number>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/offers.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"offers.json"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"offer\": {\n          \"id\": 8,\n          \"price\": 76913,\n          \"status\": \"initiated\",\n          \"created_at\": \"2023-03-08T09:47:56.323Z\",\n          \"updated_at\": \"2023-03-08T09:47:56.323Z\",\n          \"product\": {\n            \"id\": 32,\n            \"name\": \"Aether Lens\",\n            \"price\": 130201,\n            \"description\": \"A unde est. Cum consequatur magni. Sequi eos autem.\",\n            \"category_id\": 23,\n            \"user_id\": 24,\n            \"created_at\": \"2023-03-08T09:47:56.302Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.325Z\",\n            \"url\": \"http://www.example.com/products/32.json\",\n            \"user\": {\n              \"id\": 24,\n              \"name\": \"Underlord\",\n              \"email\": \"georgianne@torp-fritsch.info\",\n              \"phone_number\": \"+16841411261041\",\n              \"address\": \"Apt. 910 9089 Lemke Wells, Stephanview, MA 50071\",\n              \"city\": {\n                \"id\": 17,\n                \"name\": \"Shor's Stone\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--98d10c5664dd692dd6481f8a19591670ed63b1d4/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e6e95ede7833c6c07fac7fdb5ea82d9b3f7c334f/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ca84bd3a3506ba7e4655850b3c458b1a33186c2/sample02.png\"\n              }\n            ]\n          },\n          \"to\": {\n            \"id\": 24,\n            \"name\": \"Underlord\",\n            \"email\": \"georgianne@torp-fritsch.info\",\n            \"phone_number\": \"+16841411261041\",\n            \"address\": \"Apt. 910 9089 Lemke Wells, Stephanview, MA 50071\",\n            \"city\": {\n              \"id\": 17,\n              \"name\": \"Shor's Stone\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--98d10c5664dd692dd6481f8a19591670ed63b1d4/avatar.png\"\n            }\n          },\n          \"from\": {\n            \"id\": 23,\n            \"name\": \"Leshrac\",\n            \"email\": \"marylyn@fritsch.com\",\n            \"phone_number\": \"+2235909221571\",\n            \"address\": \"896 Wisozk Union, East Shaneka, PA 51055-4925\",\n            \"city\": {\n              \"id\": 17,\n              \"name\": \"Shor's Stone\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1fafbec0f30fce1fcd42447ec38a93e28a80399d/avatar.png\"\n            }\n          }\n        }\n      }\n    }\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "offers",
+			"item": [
+				{
+					"name": "{id}.json",
+					"item": [
+						{
+							"name": "Update Offer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk5Mjg4NywiZXhwIjoxNjk3MjAyNDg3LCJqdGkiOiI0MzIzMDJiMi1kMmNkLTQzNjMtYTI3NS01ZDc0MzU3OGQwMzAifQ.ogdgnd8M1iLEVkEcJzZb0CjpJi-ziwQoId3K4EkEVfE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"offer\": {\n    \"status\": \"denied\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/offers/32329.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"offers",
+										"32329.json"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Offer updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"offer\": {\n    \"status\": \"denied\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/offers/{{id}}.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"offers",
+												"{{id}}.json"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"offer\": {\n          \"id\": 14,\n          \"price\": 122431,\n          \"status\": \"accepted\",\n          \"created_at\": \"2023-03-08T09:47:56.488Z\",\n          \"updated_at\": \"2023-03-08T09:47:56.493Z\",\n          \"product\": {\n            \"id\": 38,\n            \"name\": \"Medallion of Courage\",\n            \"price\": 14327,\n            \"description\": \"Dolor dolores sed. Fugiat id praesentium. Et officiis eaque.\",\n            \"category_id\": 25,\n            \"user_id\": 28,\n            \"created_at\": \"2023-03-08T09:47:56.482Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.485Z\",\n            \"url\": \"http://www.example.com/products/38.json\",\n            \"user\": {\n              \"id\": 28,\n              \"name\": \"Mars\",\n              \"email\": \"thad@hahn.io\",\n              \"phone_number\": \"+22116217365745\",\n              \"address\": \"94016 Laverne Trafficway, Rolandoberg, OH 66248\",\n              \"city\": {\n                \"id\": 19,\n                \"name\": \"Betony\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--79d0087fcdb07b4be59be814b57203de5c4ef5ab/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBiQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9e3bf758233f0ce19ed3a5609bbd389281d921e0/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBiUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ad3295554b8fb380884406f6389f1e5f374264bb/sample02.png\"\n              }\n            ]\n          },\n          \"to\": {\n            \"id\": 28,\n            \"name\": \"Mars\",\n            \"email\": \"thad@hahn.io\",\n            \"phone_number\": \"+22116217365745\",\n            \"address\": \"94016 Laverne Trafficway, Rolandoberg, OH 66248\",\n            \"city\": {\n              \"id\": 19,\n              \"name\": \"Betony\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--79d0087fcdb07b4be59be814b57203de5c4ef5ab/avatar.png\"\n            }\n          },\n          \"from\": {\n            \"id\": 27,\n            \"name\": \"Skywrath Mage\",\n            \"email\": \"arlette@barton-jaskolski.io\",\n            \"phone_number\": \"+8417314181130\",\n            \"address\": \"Apt. 729 7633 Epifania Lakes, Christineshire, IL 50478\",\n            \"city\": {\n              \"id\": 19,\n              \"name\": \"Betony\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBhZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f7a4da7a2e9ac39c4b1a82f346b9de180d89fb4/avatar.png\"\n            }\n          }\n        }\n      }\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products.json",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk5Mjg4NywiZXhwIjoxNjk3MjAyNDg3LCJqdGkiOiI0MzIzMDJiMi1kMmNkLTQzNjMtYTI3NS01ZDc0MzU3OGQwMzAifQ.ogdgnd8M1iLEVkEcJzZb0CjpJi-ziwQoId3K4EkEVfE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product[name]",
+									"value": "sandal",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "product[price]",
+									"value": "170000",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "product[description]",
+									"value": "dolor ipsum",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "product[status]",
+									"value": "published",
+									"description": "(Required)  (This can only be one of draft,published)",
+									"type": "text"
+								},
+								{
+									"key": "product[category_id]",
+									"value": "2",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "product[images][]",
+									"description": "(Required) ",
+									"type": "file",
+									"src": "/C:/Users/USER/Downloads/WhatsApp Image 3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product[name]",
+											"value": "<string>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "product[price]",
+											"value": "<string>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "product[description]",
+											"value": "<string>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "product[status]",
+											"value": "published",
+											"description": "(Required)  (This can only be one of draft,published)",
+											"type": "text"
+										},
+										{
+											"key": "product[category_id]",
+											"value": "<integer>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "product[images][]",
+											"value": "<string>,<string>",
+											"description": "(Required) ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products.json"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"product\": {\n          \"id\": 39,\n          \"name\": \"Faerie Fire\",\n          \"price\": 91743,\n          \"description\": \"Aperiam qui adipisci. Voluptatem quia suscipit. Repellat sint et.\",\n          \"category_id\": 26,\n          \"user_id\": 29,\n          \"created_at\": \"2023-03-08T09:47:56.524Z\",\n          \"updated_at\": \"2023-03-08T09:47:56.527Z\",\n          \"url\": \"http://www.example.com/products/39.json\",\n          \"user\": {\n            \"id\": 29,\n            \"name\": \"Timbersaw\",\n            \"email\": \"eryn@farrell-mosciski.net\",\n            \"phone_number\": \"+5945534537712\",\n            \"address\": \"972 Brianne Corners, New Shanell, VT 75416\",\n            \"city\": {\n              \"id\": 20,\n              \"name\": \"Dragon Bridge\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBiZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a8b09461ba40492a740910ddafa15ea68afadd1f/avatar.png\"\n            }\n          },\n          \"images\": [\n            {\n              \"filename\": \"sample01.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBidz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2df585fc874105ee4a89ec53fc5f9947c94f6875/sample01.png\"\n            },\n            {\n              \"filename\": \"sample02.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ac8c581c990142697fcb5f6b4e1949e538a077ec/sample02.png\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products.json?page=1&category_id=2&user_id=77373",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products.json"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "category_id",
+									"value": "2"
+								},
+								{
+									"key": "user_id",
+									"value": "77373"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product listed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products.json?page=<number>&category_id=<number>&user_id=<number>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products.json"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<number>"
+										},
+										{
+											"key": "category_id",
+											"value": "<number>"
+										},
+										{
+											"key": "user_id",
+											"value": "<number>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"meta\": {\n          \"page_next\": 2,\n          \"page_size\": 10,\n          \"page_count\": 2,\n          \"total\": 20\n        },\n        \"products\": [\n          {\n            \"id\": 48,\n            \"name\": \"Refresher Shard\",\n            \"price\": 130988,\n            \"description\": \"Laudantium quia amet. Mollitia qui omnis. Omnis enim voluptatem.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.620Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.624Z\",\n            \"url\": \"http://www.example.com/products/48.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDA9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0bbc6774b6169610570750556bb0e3a461befc4e/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDQ9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8806819d833076ff308c39424629fb3bab57c128/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 49,\n            \"name\": \"Staff of Wizardry\",\n            \"price\": 100639,\n            \"description\": \"Harum quisquam rerum. Quia exercitationem in. A et placeat.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.629Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.633Z\",\n            \"url\": \"http://www.example.com/products/49.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDg9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66b1e587c79859a9759be1dee198087f48ea194d/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWUE9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8e980c4c7e6552e309d910129f6502f8d0241474/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 50,\n            \"name\": \"Ring of Basilius\",\n            \"price\": 136075,\n            \"description\": \"Facere quae et. Placeat error quod. Id vel suscipit.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.638Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.642Z\",\n            \"url\": \"http://www.example.com/products/50.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWUU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d1b4b2bdafdbc136b592727cf1e1a30ddda5ca92/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWUk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2b4f15d824ae379fbd10b6805d837f0234129cb4/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 51,\n            \"name\": \"Talisman of Evasion\",\n            \"price\": 136081,\n            \"description\": \"Repudiandae soluta quo. Amet doloribus omnis. Perspiciatis ut dolor.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.647Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.651Z\",\n            \"url\": \"http://www.example.com/products/51.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWU09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f4940e7477e33ac860f200fd101d961bd2cee4f/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWVE9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--84b2964cc654a10c29d0f622f27d96ab2a34d3f1/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 52,\n            \"name\": \"Refresher Orb\",\n            \"price\": 150337,\n            \"description\": \"Consequatur qui et. Fugit quia laboriosam. Omnis magni eos.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.656Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.659Z\",\n            \"url\": \"http://www.example.com/products/52.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWVU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--43924af84396f2e714c10585869486a0a7931b22/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWVk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7303cb5ef9398b3f9a203a49377d637a9c822c5f/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 53,\n            \"name\": \"Perseverance\",\n            \"price\": 128060,\n            \"description\": \"Quia id cum. Quas ipsa qui. Qui eum nihil.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.687Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.692Z\",\n            \"url\": \"http://www.example.com/products/53.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWWM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2535ca5f3c70419888395e0b068d6b693127b1e6/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWWc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--827688022b361a7abfbf018d7b133eb60ad3b1de/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 54,\n            \"name\": \"Platemail\",\n            \"price\": 91094,\n            \"description\": \"Velit vel optio. Repellat quae quisquam. Culpa beatae et.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.698Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.701Z\",\n            \"url\": \"http://www.example.com/products/54.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWWs9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--801d5dd5ec52c138774f95f2041dbd5c5ce68336/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWW89IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfd6844e25bf174bd46ab840cddb5dff90a036dc/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 40,\n            \"name\": \"Ring of Protection\",\n            \"price\": 63195,\n            \"description\": \"Quia quaerat aperiam. Perspiciatis omnis nemo. Laudantium repellat quis.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.550Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.554Z\",\n            \"url\": \"http://www.example.com/products/40.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f5c097b2931a836c29672ab65417033bd82f9cf/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7071e94fac5bb4017dac305e0dfa6aebd4f0f12c/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 41,\n            \"name\": \"Kaya\",\n            \"price\": 93319,\n            \"description\": \"Odio placeat mollitia. Eum sed eos. Dolor nesciunt quasi.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.559Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.562Z\",\n            \"url\": \"http://www.example.com/products/41.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f4a43e083a54a4839e823e8d7d76eb556c09aeb4/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9202bae34f1274f3e0f3a2d8c9f9689f9bf2ceb6/sample02.png\"\n              }\n            ]\n          },\n          {\n            \"id\": 42,\n            \"name\": \"Guardian Greaves\",\n            \"price\": 54051,\n            \"description\": \"Aliquam aut sunt. Reiciendis voluptas id. Provident debitis occaecati.\",\n            \"category_id\": 27,\n            \"user_id\": 30,\n            \"created_at\": \"2023-03-08T09:47:56.568Z\",\n            \"updated_at\": \"2023-03-08T09:47:56.571Z\",\n            \"url\": \"http://www.example.com/products/42.json\",\n            \"user\": {\n              \"id\": 30,\n              \"name\": \"Io\",\n              \"email\": \"nellie_fisher@predovic.net\",\n              \"phone_number\": \"+2662115699882\",\n              \"address\": \"Suite 670 9315 Omar Port, New Benjaminmouth, TN 22051\",\n              \"city\": {\n                \"id\": 21,\n                \"name\": \"Rorikstead\"\n              },\n              \"avatar\": {\n                \"filename\": \"avatar.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bde1188887bf554ed1f8ebc696e646342fcd276b/avatar.png\"\n              }\n            },\n            \"images\": [\n              {\n                \"filename\": \"sample01.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b202373038ff85167bea4fa4bd61f5b98298674a/sample01.png\"\n              },\n              {\n                \"filename\": \"sample02.png\",\n                \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dbe60410c8568de88503a006c7c79f14a79286cb/sample02.png\"\n              }\n            ]\n          }\n        ]\n      }\n    }\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "{id}.json",
+					"item": [
+						{
+							"name": "Get Product",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products/41123.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"41123.json"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Product retrieved",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/products/{{id}}.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												"{{id}}.json"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"product\": {\n          \"id\": 60,\n          \"name\": \"Solar Crest\",\n          \"price\": 76674,\n          \"description\": \"In sunt non. Ratione perferendis non. Dolorum esse sed.\",\n          \"category_id\": 29,\n          \"user_id\": 31,\n          \"created_at\": \"2023-03-08T09:47:56.796Z\",\n          \"updated_at\": \"2023-03-08T09:47:56.799Z\",\n          \"url\": \"http://www.example.com/products/60.json\",\n          \"user\": {\n            \"id\": 31,\n            \"name\": \"Sand King\",\n            \"email\": \"angelo@jacobson-sanford.biz\",\n            \"phone_number\": \"+80914152687196\",\n            \"address\": \"Suite 723 120 Lashonda Brook, North Stevenberg, WY 61651-0242\",\n            \"city\": {\n              \"id\": 22,\n              \"name\": \"Falkreath\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWlU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a121b4043ad21cc5415dbb84a153fa253b64aa96/avatar.png\"\n            }\n          },\n          \"images\": [\n            {\n              \"filename\": \"sample01.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWlk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7c90b010b14a155264ecf7b2ff8aa5ff7dd681d1/sample01.png\"\n            },\n            {\n              \"filename\": \"sample02.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWmM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--82346644347c27d25e31bef1593d74524a137bd9/sample02.png\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk3OTM2NywiZXhwIjoxNjk3MTg4OTY3LCJqdGkiOiI0NGU5ZDA3Zi0wMWMxLTRiOWQtOGM4Ni1mMDE5ZmNhOGY3MmUifQ.WvHGc1reu4kg2ci4eh3lo1lHGEx6hMuw8KQ9tq6B5WU}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product[name]",
+											"value": "sepatu",
+											"type": "text"
+										},
+										{
+											"key": "product[price]",
+											"value": "125000",
+											"type": "text"
+										},
+										{
+											"key": "product[description]",
+											"value": "dolor ipsum",
+											"type": "text"
+										},
+										{
+											"key": "product[status]",
+											"value": "draft",
+											"description": " (This can only be one of draft,published)",
+											"type": "text"
+										},
+										{
+											"key": "product[category_id]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "product[images][]",
+											"type": "file",
+											"src": "/C:/Users/USER/Downloads/WhatsApp Image 2.jpg"
+										},
+										{
+											"key": "product[persisted_images][]",
+											"type": "file",
+											"src": "/C:/Users/USER/Downloads/WhatsApp Image 4.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/41123.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"41123.json"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Product updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product[name]",
+													"value": "<string>",
+													"type": "text"
+												},
+												{
+													"key": "product[price]",
+													"value": "<string>",
+													"type": "text"
+												},
+												{
+													"key": "product[description]",
+													"value": "<string>",
+													"type": "text"
+												},
+												{
+													"key": "product[status]",
+													"value": "draft",
+													"description": " (This can only be one of draft,published)",
+													"type": "text"
+												},
+												{
+													"key": "product[category_id]",
+													"value": "<integer>",
+													"type": "text"
+												},
+												{
+													"key": "product[images][]",
+													"value": "<string>,<string>",
+													"type": "text"
+												},
+												{
+													"key": "product[persisted_images][]",
+													"value": "<string>,<string>",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/{{id}}.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												"{{id}}.json"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"product\": {\n          \"id\": 61,\n          \"name\": \"Silver Edge\",\n          \"price\": 13646,\n          \"description\": \"Qui in consequatur. Qui aperiam repellendus. Similique quaerat repudiandae.\",\n          \"category_id\": 31,\n          \"user_id\": 33,\n          \"created_at\": \"2023-03-08T09:47:56.834Z\",\n          \"updated_at\": \"2023-03-08T09:47:56.856Z\",\n          \"url\": \"http://www.example.com/products/61.json\",\n          \"user\": {\n            \"id\": 33,\n            \"name\": \"Axe\",\n            \"email\": \"adolfo@dare.name\",\n            \"phone_number\": \"+69219417304207\",\n            \"address\": \"Apt. 518 6833 Weber Shores, Hoegerhaven, SC 09312\",\n            \"city\": {\n              \"id\": 23,\n              \"name\": \"Wayrest\"\n            },\n            \"avatar\": {\n              \"filename\": \"avatar.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWms9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0b31fec6fc30dc501446af2c92353a72699d6a76/avatar.png\"\n            }\n          },\n          \"images\": [\n            {\n              \"filename\": \"sample01.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWm89IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4cfe50e08a60186005b909ceb0e720879b00aacb/sample01.png\"\n            },\n            {\n              \"filename\": \"sample02.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWnM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6a4fdca3ba4ac2d46e5c55b2b033d377098d7562/sample02.png\"\n            },\n            {\n              \"filename\": \"sample01.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWnc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7ed11eebb4a075d40f8fc97ddb0eaaa8486525ec/sample01.png\"\n            },\n            {\n              \"filename\": \"sample02.png\",\n              \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWjA9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d678019f2dfeed81836a08bc65f01855658fa9c9/sample02.png\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk5Mjg4NywiZXhwIjoxNjk3MjAyNDg3LCJqdGkiOiI0MzIzMDJiMi1kMmNkLTQzNjMtYTI3NS01ZDc0MzU3OGQwMzAifQ.ogdgnd8M1iLEVkEcJzZb0CjpJi-ziwQoId3K4EkEVfE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/41113.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"41113.json"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Product deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/products/{{id}}.json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												"{{id}}.json"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "profiles.json",
+			"item": [
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk5Mjg4NywiZXhwIjoxNjk3MjAyNDg3LCJqdGkiOiI0MzIzMDJiMi1kMmNkLTQzNjMtYTI3NS01ZDc0MzU3OGQwMzAifQ.ogdgnd8M1iLEVkEcJzZb0CjpJi-ziwQoId3K4EkEVfE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user[name]",
+									"value": "zulfi",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "user[address]",
+									"value": "malang",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "user[city_id]",
+									"value": "1",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "user[phone_number]",
+									"value": "99008788878",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "user[avatar]",
+									"type": "file",
+									"src": "/C:/Users/USER/Downloads/WhatsApp Image 4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/profiles.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profiles.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Profile Updated",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user[name]",
+											"value": "<string>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "user[address]",
+											"value": "<string>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "user[city_id]",
+											"value": "<number>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "user[phone_number]",
+											"value": "<string>",
+											"description": "(Required) ",
+											"type": "text"
+										},
+										{
+											"key": "user[avatar]",
+											"value": "<string>",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/profiles.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"profiles.json"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"user\": {\n          \"id\": 35,\n          \"name\": \"Dark Seer\",\n          \"email\": \"olen@bruen-crooks.io\",\n          \"phone_number\": \"+9963447042081\",\n          \"address\": \"Suite 934 93753 Graham Groves, Dooleyfort, NE 18711\",\n          \"city\": {\n            \"id\": 25,\n            \"name\": \"Betony\"\n          },\n          \"avatar\": {\n            \"filename\": \"avatar.png\",\n            \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYUU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--86643e06e574e5967df2bf034e8bf8d1fd15f8fb/avatar.png\"\n          }\n        }\n      }\n    }\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzMzMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NTk5Mjg4NywiZXhwIjoxNjk3MjAyNDg3LCJqdGkiOiI0MzIzMDJiMi1kMmNkLTQzNjMtYTI3NS01ZDc0MzU3OGQwMzAifQ.ogdgnd8M1iLEVkEcJzZb0CjpJi-ziwQoId3K4EkEVfE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/profiles.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profiles.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Profile Retrieved",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/profiles.json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"profiles.json"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"examples\": {\n    \"ok\": {\n      \"value\": {\n        \"user\": {\n          \"id\": 36,\n          \"name\": \"Clinkz\",\n          \"email\": \"leigh@sawayn.org\",\n          \"phone_number\": \"+3718534783033\",\n          \"address\": \"939 Stark Estate, Creminberg, SC 95947\",\n          \"city\": {\n            \"id\": 26,\n            \"name\": \"Alcaire\"\n          },\n          \"avatar\": {\n            \"filename\": \"avatar.png\",\n            \"url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYUk9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4fa6e2abd5ba76e1a6f2b83eaaad862d4777d073/avatar.png\"\n          }\n        }\n      }\n    }\n  }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "defaultHost",
+			"value": "secondhand.binaracademy.org"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://{{defaultHost}}"
+		},
+		{
+			"key": "id",
+			"value": "<string>"
+		},
+		{
+			"key": "id",
+			"value": "<string>"
+		},
+		{
+			"key": "id",
+			"value": "<string>"
+		},
+		{
+			"key": "id",
+			"value": "<number>"
+		},
+		{
+			"key": "id",
+			"value": "<number>"
+		}
+	]
+}
